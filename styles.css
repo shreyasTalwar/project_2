@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -58,7 +59,7 @@ h2 {
 
 .ingredients-list li:last-child {
     border-bottom: none;
-}git commiy
+}
 
 .checkmark {
     color: #4CAF50;
@@ -102,6 +103,39 @@ h2 {
     color: #d2691e;
 }
 
+.easy-recipe-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff9d6c, #ff6a88);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(255, 106, 136, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.easy-recipe-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(255, 106, 136, 0.5);
+}
+
+.easy-recipe-btn:focus-visible {
+    outline: 3px solid rgba(255, 106, 136, 0.4);
+    outline-offset: 4px;
+}
+
+.easy-recipe-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 16px rgba(255, 106, 136, 0.4);
+    opacity: 0.9;
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
@@ -128,6 +162,13 @@ h2 {
 
     .tip-section {
         padding: 15px;
+    }
+
+    .easy-recipe-btn {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+        text-align: center;
     }
 }
 
